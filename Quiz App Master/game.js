@@ -78,7 +78,7 @@ getNewQuestion = () => {
         const number = choice.dataset['number'];
         choice.innerHTML = currentQuestion['choice' + number];
 
-        if (choice.textContent === "") choice.parentElement.add("hidden");
+        if (!(choice.textContent === "")) choice.parentElement.add("hidden");
     });
 
     availableQuesions.splice(questionIndex, 1);
